@@ -1,0 +1,12 @@
+function evaluate_result
+    result_path = dir('../images/result3/');
+    for i=3:numel(result_path)
+        result_file = result_path(i,1).name;
+    end
+end
+
+function acc_eval(result_path,image_id)
+    gt = imread(strcat('../images/gt/',image_id,'.bmp'));
+    result = imread(strcat('../images/',result_path,'/',image_id,'.bmp'));
+    
+end
